@@ -27,5 +27,14 @@ pipeline{
                       }
                 }
             }
+        stage('Deploy our image') {
+            steps{
+                script {
+                    docker.withRegistry( "http://'' + registry,"us-west-2", registryCredential ) {
+                    dockerImage.push()
+                        }
+                    }
+                }
+}
         }
 }
