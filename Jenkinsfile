@@ -4,7 +4,9 @@ pipeline{
         registryCredential = 'jenkins-ecr-login-credentials'
         dockerImage = ''
     }
-    agent any
+        agent {
+        label 'slave1'
+        }
     tools { 
         maven 'maven-3.9.0'
        
