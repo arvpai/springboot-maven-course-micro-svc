@@ -4,7 +4,7 @@ pipeline{
         // registryCredential = 'dockerhub_id'
         // dockerImage = ''
     }
-    agent any 
+    agent any
     tools { 
         maven 'maven-3.9.0'
        
