@@ -5,7 +5,7 @@ pipeline{
         dockerImage = ''
     }
         agent {
-        label 'slave1'
+        label 'slave2'
         }
     tools { 
         maven 'maven-3.9.0'
