@@ -3,8 +3,8 @@ pipeline{
         registry = "436634162240.dkr.ecr.us-west-2.amazonaws.com/hellodatarepo"
         // registryCredential = 'dockerhub_id'
         // dockerImage = ''
-     agent any
-        }
+    }
+    agent any 
     tools { 
         maven 'maven-3.9.0'
        
