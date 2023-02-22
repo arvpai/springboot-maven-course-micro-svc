@@ -1,8 +1,8 @@
 pipeline{
     environment {
         registry = "436634162240.dkr.ecr.us-west-2.amazonaws.com/hellodatarepo"
-         registryCredential = 'jenkins-ecr-login-credentials'
-         dockerImage = ''
+        registryCredential = "jenkins-ecr-login-credentials"
+        dockerImage = ''
     }
     agent any
     tools { 
