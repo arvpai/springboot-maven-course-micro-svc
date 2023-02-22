@@ -1,7 +1,7 @@
 pipeline{
     environment {
         registry = "436634162240.dkr.ecr.us-west-2.amazonaws.com/hellodatarepo"
-        registryCredential = "jenkins-ecr-login-credentials"
+        registryCredential = 'jenkins-ecr-login-credentials'
         dockerImage = ''
     }
     agent any
@@ -30,7 +30,7 @@ pipeline{
         stage('Deploy our image') {
             steps{
                 script {
-                    docker.withRegistry( "http://" + registry, "ecr:us-west-2:" registryCredential ) {
+                    docker.withRegistry( "http://" + registry, "ecr:us-west-2:" + registryCredential ) {
                     dockerImage.push()
                         }
                     }
